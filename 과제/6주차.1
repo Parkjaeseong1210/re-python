@@ -1,0 +1,19 @@
+import random
+
+def getNumber():
+    return random.randrange(1, 46)
+
+lotto = []
+
+print("** 로또 추첨을 시작합니다. **")
+
+while len(lotto) < 6:
+    num = getNumber()
+    if num not in lotto:
+        lotto.append(num)
+
+lotto.sort()
+
+print("추첨된 로또 번호 ==> ", end="")
+for n in lotto:
+    print(n, end=" ")
